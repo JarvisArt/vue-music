@@ -1,4 +1,4 @@
-import {getLyric} from 'api/song'
+import {getLyric, getSingerKEY} from 'api/song'
 import {ERR_OK} from 'api/config'
 import {Base64} from 'js-base64'
 
@@ -28,8 +28,6 @@ export default class Song {
         }
       })
     })
-
-
   }
 }
 
@@ -43,12 +41,12 @@ export function createSong(musicData) {
     album: musicData.songname,
     duration: musicData.interval,
     image: `https://y.gtimg.cn/music/photo_new/T002R300x300M000${musicData.albummid}.jpg?max_age=2592000`,
-    url: `http://dl.stream.qqmusic.qq.com/http://dl.stream.qqmusic.qq.com/C400${musicData.songmid}.m4a?guid=2294638424&vkey=224188821C4C4714C30AC2F2687E84DC91426AB05F763E941EEAEAC42A722D44DF8D5C3BC1378F918D0C008091755CD1421997E747A786B7&uin=0&fromtag=38`
+    url: `http://dl.stream.qqmusic.qq.com/http://dl.stream.qqmusic.qq.com/C400${musicData.songmid}.m4a?guid=7487636136&vkey=`
   })
 }
 
 // 歌手名字符串组合
-function filterSinger(singer) {
+export function filterSinger(singer) {
   let ret = []
   if (!singer) {
     return ''
