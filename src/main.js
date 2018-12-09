@@ -8,6 +8,8 @@ import VueLazyLoad from 'vue-lazyload'
 
 import 'common/stylus/index.styl'
 
+// import 'common/js/vconsole'
+
 fastclick.attach(document.body)
 
 Vue.use(VueLazyLoad, {
