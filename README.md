@@ -2,6 +2,8 @@
 
 > 音乐播放器
 
+> Preview: https://jarvisart.github.io/vue-music/dist/index#/rank
+
 ## Build Setup
 
 ``` bash
